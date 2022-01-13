@@ -1,0 +1,34 @@
+# Eclipse
+.classpath
+.project
+.settings/
+.recommenders/
+bin/
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+*/buildNumber.properties
+/*buildNumber.properties
+*buildNumber.properties
+mm-messaging-core/buildNumber.properties
+buildNumber.properties
+
+*/buildNumber.json
+/*buildNumber.json
+*buildNumber.json
+mm-messaging-core/buildNumber.json
+buildNumber.json
+
+#NPM
+/mm-ui/dist/**
+/.metadata/
+*/history.txt
+/sm-api/history.txt
