@@ -53,3 +53,6 @@ The following default users are configured in `konga/user_seed.js`:
 After logging in as admin, create a new connection with URL `http://kong:8001`.
 
 Konga uses MongoDB (4.1) with a persistent Docker volume for its credentials.
+
+### POSTMAN
+

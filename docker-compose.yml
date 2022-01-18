@@ -39,13 +39,15 @@ services:
         condition: service_healthy
     volumes:
       - ./dummy-plugin:/usr/local/bin/dummy-plugin
+      - ./xml-request-transformer:/usr/local/bin/xml-request-transformer
     environment:
       KONG_DATABASE: postgres
       KONG_PG_HOST: kong-database
       KONG_LOG_LEVEL: debug
-      KONG_PLUGINS: dummy-plugin,basic-auth,prometheus
-      KONG_PLUGINSERVER_NAMES: dummy-plugin
+      KONG_PLUGINS: dummy-plugin,basic-auth,prometheus,xml-request-transformer
+      KONG_PLUGINSERVER_NAMES: dummy-plugin,xml-request-transformer
       KONG_PLUGINSERVER_DUMMY_PLUGIN_QUERY_CMD: /usr/local/bin/dummy-plugin -dump
+      KONG_PLUGINSERVER_XML_REQUEST_TRANSFORMER_QUERY_CMD: /usr/local/bin/xml-request-transformer -dump
       KONG_PROXY_ACCESS_LOG: /dev/stdout
       KONG_ADMIN_ACCESS_LOG: /dev/stdout
       KONG_PROXY_ERROR_LOG: /dev/stderr
