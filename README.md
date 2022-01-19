@@ -56,3 +56,26 @@ Konga uses MongoDB (4.1) with a persistent Docker volume for its credentials.
 
 ### POSTMAN
 
+`https://www.getpostman.com/collections/fb3e3a30865ebe1f805a`
+
+### Commands
+
+`cd servicea`
+
+`mvn clean install -DskipTests`
+
+`cd ..`
+
+`cd serviceb`
+
+`mvn clean install -DskipTests`
+
+`cd ..`
+
+`cd servicec`
+
+`mvn clean install -DskipTests`
+
+`cd ..`
+
+`docker-compose up`
